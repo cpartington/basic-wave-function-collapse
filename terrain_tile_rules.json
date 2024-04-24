@@ -1,0 +1,158 @@
+{
+    "tile_data": [
+        {
+            "atlas": {
+                "atlas_x": 0,
+                "atlas_y": 0
+            },
+            "name": "grass",
+            "rules": {
+                "above": "grass",
+                "below": "grass",
+                "left": "grass",
+                "right": "grass"
+            },
+            "type": "grass"
+        },
+        {
+            "atlas": {
+                "atlas_x": 1,
+                "atlas_y": 0
+            },
+            "name": "river corner 1",
+            "rules": {
+                "above": "river",
+                "below": "grass",
+                "left": "river",
+                "right": "grass"
+            },
+            "type": "river corner"
+        },
+        {
+            "atlas": {
+                "atlas_x": 2,
+                "atlas_y": 0
+            },
+            "name": "river corner 2",
+            "rules": {
+                "above": "river",
+                "below": "grass",
+                "left": "grass",
+                "right": "river"
+            },
+            "type": "river corner"
+        },
+        {
+            "atlas": {
+                "atlas_x": 3,
+                "atlas_y": 0
+            },
+            "name": "river corner 3",
+            "rules": {
+                "above": "grass",
+                "below": "river",
+                "left": "grass",
+                "right": "river"
+            },
+            "type": "river corner"
+        },
+        {
+            "atlas": {
+                "atlas_x": 4,
+                "atlas_y": 0
+            },
+            "name": "river corner 4",
+            "rules": {
+                "above": "grass",
+                "below": "river",
+                "left": "river",
+                "right": "grass"
+            },
+            "type": "river corner"
+        },
+        {
+            "atlas": {
+                "atlas_x": 5,
+                "atlas_y": 0
+            },
+            "name": "river straight 1",
+            "rules": {
+                "above": "grass",
+                "below": "grass",
+                "left": "river",
+                "right": "river"
+            },
+            "type": "river straight"
+        },
+        {
+            "atlas": {
+                "atlas_x": 6,
+                "atlas_y": 0
+            },
+            "name": "river straight 2",
+            "rules": {
+                "above": "river",
+                "below": "river",
+                "left": "grass",
+                "right": "grass"
+            },
+            "type": "river straight"
+        },
+        {
+            "atlas": {
+                "atlas_x": 7,
+                "atlas_y": 0
+            },
+            "name": "river tsection 1",
+            "rules": {
+                "above": "river",
+                "below": "grass",
+                "left": "river",
+                "right": "river"
+            },
+            "type": "river tsection"
+        },
+        {
+            "atlas": {
+                "atlas_x": 8,
+                "atlas_y": 0
+            },
+            "name": "river tsection 2",
+            "rules": {
+                "above": "river",
+                "below": "river",
+                "left": "grass",
+                "right": "river"
+            },
+            "type": "river tsection"
+        },
+        {
+            "atlas": {
+                "atlas_x": 9,
+                "atlas_y": 0
+            },
+            "name": "river tsection 3",
+            "rules": {
+                "above": "grass",
+                "below": "river",
+                "left": "river",
+                "right": "river"
+            },
+            "type": "river tsection"
+        },
+        {
+            "atlas": {
+                "atlas_x": 10,
+                "atlas_y": 0
+            },
+            "name": "river tsection 4",
+            "rules": {
+                "above": "river",
+                "below": "river",
+                "left": "river",
+                "right": "grass"
+            },
+            "type": "river tsection"
+        }
+    ]
+}

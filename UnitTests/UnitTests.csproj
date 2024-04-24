@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\hackathon.csproj" />
+    <ProjectReference Include="..\Source\hackathon.csproj" />
   </ItemGroup>
 
   <ItemGroup>

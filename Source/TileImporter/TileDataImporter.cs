@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text.Json;
 
-namespace hackathon
+namespace hackathon.TileImporter
 {
     public static class TileDataImporter
     {
@@ -14,7 +14,7 @@ namespace hackathon
 
             using FileStream stream = File.OpenRead(TileDataFile);
             using JsonDocument jsonDocument = JsonDocument.Parse(stream);
-            
+
             // Populate tile data
             JsonElement data = jsonDocument.RootElement.GetProperty("tile_data");
             foreach (JsonElement tileData in data.EnumerateArray())

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Godot;
 
-namespace hackathon
+namespace hackathon.TileImporter
 {
     public enum EdgeType
     {
@@ -26,6 +25,6 @@ namespace hackathon
         public List<Tile> TopAllowedTiles { get; set; } = new();
         public List<Tile> BottomAllowedTiles { get; set; } = new();
 
-        public Tile() {}
+        public Tile() { }
     }
 }

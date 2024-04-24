@@ -5,6 +5,7 @@
                 "atlas_x": 0,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "grass",
             "rules": {
                 "bottom": "grass",
@@ -19,6 +20,7 @@
                 "atlas_x": 1,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "river corner 1",
             "rules": {
                 "bottom": "grass",
@@ -33,6 +35,7 @@
                 "atlas_x": 2,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "river corner 2",
             "rules": {
                 "bottom": "grass",
@@ -47,6 +50,7 @@
                 "atlas_x": 3,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "river corner 3",
             "rules": {
                 "bottom": "river",
@@ -61,6 +65,7 @@
                 "atlas_x": 4,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "river corner 4",
             "rules": {
                 "bottom": "river",
@@ -72,9 +77,10 @@
         },
         {
             "atlas": {
-                "atlas_x": 5,
+                "atlas_x": 0.5,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "river straight 1",
             "rules": {
                 "bottom": "grass",
@@ -89,6 +95,7 @@
                 "atlas_x": 6,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "river straight 2",
             "rules": {
                 "bottom": "river",
@@ -103,6 +110,7 @@
                 "atlas_x": 7,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "river tsection 1",
             "rules": {
                 "bottom": "grass",
@@ -117,6 +125,7 @@
                 "atlas_x": 8,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "river tsection 2",
             "rules": {
                 "bottom": "river",
@@ -131,6 +140,7 @@
                 "atlas_x": 9,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "river tsection 3",
             "rules": {
                 "bottom": "river",
@@ -145,6 +155,7 @@
                 "atlas_x": 10,
                 "atlas_y": 0
             },
+            "likelihood": 5,
             "name": "river tsection 4",
             "rules": {
                 "bottom": "river",

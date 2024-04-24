@@ -1,24 +1,41 @@
-﻿namespace hackathon.Tests
+﻿using Godot;
+
+namespace hackathon.Tests
 {
     [TestClass()]
     public class TileDataImporterTests
     {
         [TestMethod()]
-        public void GetTileData_NoUnknowns()
+        public void GetTileData_NoNulls()
         {
             List<Tile> tiles = TileDataImporter.GetTileData();
 
-            static string GetError(string edgeType)
+            static string GetUnknownError(Vector2I coord, string edgeType)
             {
-                return $"{edgeType} should not be {nameof(EdgeType)} {nameof(EdgeType.Unknown)}";
+                return $"{edgeType} should not be {nameof(EdgeType.Unknown)} for tile ({coord})";
+            }
+
+            static string GetCountError(Vector2I coord, string listName)
+            {
+                return $"{listName} should have count greater than zero for tile ({coord})";
             }
 
             foreach (Tile tile in tiles)
             {
-                Assert.IsTrue(tile.LeftEdgeType != EdgeType.Unknown, GetError(nameof(tile.LeftEdgeType)));
-                Assert.IsTrue(tile.RightEdgeType != EdgeType.Unknown, GetError(nameof(tile.RightEdgeType)));
-                Assert.IsTrue(tile.TopEdgeType != EdgeType.Unknown, GetError(nameof(tile.TopEdgeType)));
-                Assert.IsTrue(tile.BottomEdgeType != EdgeType.Unknown, GetError(nameof(tile.BottomEdgeType)));
+                // Check frequency
+                Assert.IsNotNull(tile.Likelihood);
+
+                // Check edge types
+                Assert.IsTrue(tile.LeftEdgeType != EdgeType.Unknown, GetUnknownError(tile.AtlasCoord, nameof(tile.LeftEdgeType)));
+                Assert.IsTrue(tile.RightEdgeType != EdgeType.Unknown, GetUnknownError(tile.AtlasCoord, nameof(tile.RightEdgeType)));
+                Assert.IsTrue(tile.TopEdgeType != EdgeType.Unknown, GetUnknownError(tile.AtlasCoord, nameof(tile.TopEdgeType)));
+                Assert.IsTrue(tile.BottomEdgeType != EdgeType.Unknown, GetUnknownError(tile.AtlasCoord, nameof(tile.BottomEdgeType)));
+
+                // Check allowed tiles
+                Assert.IsTrue(tile.LeftAllowedTiles.Count > 0, GetCountError(tile.AtlasCoord, nameof(tile.LeftAllowedTiles)));
+                Assert.IsTrue(tile.RightAllowedTiles.Count > 0, GetCountError(tile.AtlasCoord, nameof(tile.RightAllowedTiles)));
+                Assert.IsTrue(tile.TopAllowedTiles.Count > 0, GetCountError(tile.AtlasCoord, nameof(tile.TopAllowedTiles)));
+                Assert.IsTrue(tile.BottomAllowedTiles.Count > 0, GetCountError(tile.AtlasCoord, nameof(tile.BottomAllowedTiles)));
             }
         }
 
@@ -29,13 +46,6 @@
 
             foreach (Tile tile in tiles)
             {
-                // Every tile should have at least one tile type that can border it on each side
-                Assert.IsTrue(tile.LeftAllowedTiles.Count > 0);
-                Assert.IsTrue(tile.RightAllowedTiles.Count > 0);
-                Assert.IsTrue(tile.TopAllowedTiles.Count > 0);
-                Assert.IsTrue(tile.BottomAllowedTiles.Count > 0);
-
-                // Every tile should match up correctly
                 foreach (Tile leftTile in tile.LeftAllowedTiles)
                 {
                     Assert.AreEqual(tile.LeftEdgeType, leftTile.RightEdgeType);

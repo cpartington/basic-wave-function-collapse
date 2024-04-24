@@ -31,6 +31,7 @@ namespace hackathon
                 tiles.Add(new Tile
                 {
                     AtlasCoord = new(x, y),
+                    Likelihood = tileData.GetProperty("likelihood").GetInt32(),
                     LeftEdgeType = JsonToTileType(edgeRules.GetProperty("left")),
                     RightEdgeType = JsonToTileType(edgeRules.GetProperty("right")),
                     TopEdgeType = JsonToTileType(edgeRules.GetProperty("top")),
@@ -72,6 +73,7 @@ namespace hackathon
                 }
             }
 
+            // Return the populated tiles
             return tiles;
         }
 

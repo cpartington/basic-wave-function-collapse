@@ -14,7 +14,7 @@ namespace hackathon
     public class Tile
     {
         public Vector2I AtlasCoord { get; set; }
-        public int Frequency { get; set; }
+        public int Likelihood { get; set; }
 
         public EdgeType LeftEdgeType { get; set; }
         public EdgeType RightEdgeType { get; set; }

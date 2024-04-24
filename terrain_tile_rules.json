@@ -7,10 +7,10 @@
             },
             "name": "grass",
             "rules": {
-                "above": "grass",
-                "below": "grass",
+                "bottom": "grass",
                 "left": "grass",
-                "right": "grass"
+                "right": "grass",
+                "top": "grass"
             },
             "type": "grass"
         },
@@ -21,10 +21,10 @@
             },
             "name": "river corner 1",
             "rules": {
-                "above": "river",
-                "below": "grass",
+                "bottom": "grass",
                 "left": "river",
-                "right": "grass"
+                "right": "grass",
+                "top": "river"
             },
             "type": "river corner"
         },
@@ -35,10 +35,10 @@
             },
             "name": "river corner 2",
             "rules": {
-                "above": "river",
-                "below": "grass",
+                "bottom": "grass",
                 "left": "grass",
-                "right": "river"
+                "right": "river",
+                "top": "river"
             },
             "type": "river corner"
         },
@@ -49,10 +49,10 @@
             },
             "name": "river corner 3",
             "rules": {
-                "above": "grass",
-                "below": "river",
+                "bottom": "river",
                 "left": "grass",
-                "right": "river"
+                "right": "river",
+                "top": "grass"
             },
             "type": "river corner"
         },
@@ -63,10 +63,10 @@
             },
             "name": "river corner 4",
             "rules": {
-                "above": "grass",
-                "below": "river",
+                "bottom": "river",
                 "left": "river",
-                "right": "grass"
+                "right": "grass",
+                "top": "grass"
             },
             "type": "river corner"
         },
@@ -77,10 +77,10 @@
             },
             "name": "river straight 1",
             "rules": {
-                "above": "grass",
-                "below": "grass",
+                "bottom": "grass",
                 "left": "river",
-                "right": "river"
+                "right": "river",
+                "top": "grass"
             },
             "type": "river straight"
         },
@@ -91,10 +91,10 @@
             },
             "name": "river straight 2",
             "rules": {
-                "above": "river",
-                "below": "river",
+                "bottom": "river",
                 "left": "grass",
-                "right": "grass"
+                "right": "grass",
+                "top": "river"
             },
             "type": "river straight"
         },
@@ -105,10 +105,10 @@
             },
             "name": "river tsection 1",
             "rules": {
-                "above": "river",
-                "below": "grass",
+                "bottom": "grass",
                 "left": "river",
-                "right": "river"
+                "right": "river",
+                "top": "river"
             },
             "type": "river tsection"
         },
@@ -119,10 +119,10 @@
             },
             "name": "river tsection 2",
             "rules": {
-                "above": "river",
-                "below": "river",
+                "bottom": "river",
                 "left": "grass",
-                "right": "river"
+                "right": "river",
+                "top": "river"
             },
             "type": "river tsection"
         },
@@ -133,10 +133,10 @@
             },
             "name": "river tsection 3",
             "rules": {
-                "above": "grass",
-                "below": "river",
+                "bottom": "river",
                 "left": "river",
-                "right": "river"
+                "right": "river",
+                "top": "grass"
             },
             "type": "river tsection"
         },
@@ -147,10 +147,10 @@
             },
             "name": "river tsection 4",
             "rules": {
-                "above": "river",
-                "below": "river",
+                "bottom": "river",
                 "left": "river",
-                "right": "grass"
+                "right": "grass",
+                "top": "river"
             },
             "type": "river tsection"
         }

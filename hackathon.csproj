@@ -5,4 +5,13 @@
     <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'ios' ">net8.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="TileDataImporter\**" />
+    <EmbeddedResource Remove="TileDataImporter\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="terrain_tile_rules.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

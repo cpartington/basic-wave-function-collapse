@@ -12,7 +12,7 @@ public partial class Terrain : TileMap
 		// Weighted likelihoods for every tile
 
 		// Test code
-		List<TileType> tiles = TileDataImporter.GetTileData();
+		List<Tile> tiles = TileDataImporter.GetTileData();
 		Vector2 ScreenSize = GetViewportRect().Size;
 		Random random = new();
 		for (int x = 0; x < ScreenSize.X; x++)

@@ -3,6 +3,8 @@
 
 # Visual Studio
 .vs/
+UnitTests/obj/
+UnitTests/bin/
 
 # Tile stuff
 *.import

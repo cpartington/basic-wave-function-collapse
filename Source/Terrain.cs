@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Godot;
-using hackathon.TileImporter;
+using hackathon;
 
 public partial class Terrain : TileMap
 {
@@ -9,8 +9,28 @@ public partial class Terrain : TileMap
 	// Also called when window is resized
 	public override void _Ready()
 	{
-		 
-	}
+        WaveFunctionCollapseGeneration();
+    }
+
+    private void WaveFunctionCollapseGeneration()
+    {
+        // Make a terrain grid that matches the size of the view window
+        Vector2 screenSize = GetViewportRect().Size;
+        var gridX = (int)screenSize.X;
+        var gridY = (int)screenSize.Y;
+
+        Cell[,] terrainGrid = new Cell[gridY, gridX];
+
+        // Keep track of cell with lowest entropy
+        double lowestEntropy = double.MaxValue;
+        Cell lowestEntropyCell = null;
+
+        // Create a queue for cells that need updating
+
+
+        // Pick a random cell to start with since everything is initialized equally
+        Random random = new();
+    }
 
 	private void BasicGeneration()
 	{

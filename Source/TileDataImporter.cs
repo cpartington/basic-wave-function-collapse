@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text.Json;
 
-namespace hackathon.TileImporter
+namespace hackathon
 {
     public static class TileDataImporter
     {
@@ -71,6 +71,17 @@ namespace hackathon.TileImporter
                         targetTile.TopAllowedTiles.Add(sourceTile);
                     }
                 }
+            }
+
+            // Calculate tile frequencies
+            int totalLikelihood = 0;
+            foreach (Tile tile in tiles)
+            {
+                totalLikelihood += tile.Likelihood;
+            }
+            foreach (Tile tile in tiles)
+            {
+                tile.Frequency = tile.Likelihood / (float)totalLikelihood;
             }
 
             // Return the populated tiles

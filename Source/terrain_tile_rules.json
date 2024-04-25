@@ -77,7 +77,7 @@
         },
         {
             "atlas": {
-                "atlas_x": 0.5,
+                "atlas_x": 5,
                 "atlas_y": 0
             },
             "likelihood": 5,

@@ -1,5 +1,5 @@
 ﻿using Godot;
-using hackathon.TileImporter;
+using hackathon;
 
 namespace hackathon.Tests
 {
@@ -24,7 +24,7 @@ namespace hackathon.Tests
             foreach (Tile tile in tiles)
             {
                 // Check frequency
-                Assert.IsNotNull(tile.Likelihood);
+                Assert.IsNotNull(tile.Frequency);
 
                 // Check edge types
                 Assert.IsTrue(tile.LeftEdgeType != EdgeType.Unknown, GetUnknownError(tile.AtlasCoord, nameof(tile.LeftEdgeType)));

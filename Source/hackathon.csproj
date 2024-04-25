@@ -7,7 +7,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="TileDataImporter\**" />
+    <Compile Remove="TileImporter\**" />
     <EmbeddedResource Remove="TileDataImporter\**" />
+    <EmbeddedResource Remove="TileImporter\**" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="terrain_tile_rules.json">

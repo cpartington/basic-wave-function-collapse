@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Godot;
 
-namespace hackathon.TileImporter
+namespace hackathon
 {
     public enum EdgeType
     {
@@ -13,7 +14,22 @@ namespace hackathon.TileImporter
     public class Tile
     {
         public Vector2I AtlasCoord { get; set; }
+
         public int Likelihood { get; set; }
+        private float _frequency;
+        public float Frequency
+        {
+            get
+            {
+                return _frequency;
+            }
+            set
+            {
+                _frequency = value;
+                FreqLogFreq = _frequency * Math.Log2(_frequency);
+            }
+        }
+        public double FreqLogFreq { get; private set; }
 
         public EdgeType LeftEdgeType { get; set; }
         public EdgeType RightEdgeType { get; set; }

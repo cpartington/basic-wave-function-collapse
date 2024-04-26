@@ -40,35 +40,35 @@ namespace hackathon
             }
 
             // Calculate tile allowances
-            for (int i = 0; i < tiles.Count; i++)
+            for (int sourceTileIndex = 0; sourceTileIndex < tiles.Count; sourceTileIndex++)
             {
-                Tile sourceTile = tiles[i];
-                for (int j = i; j < tiles.Count; j++)
+                Tile sourceTile = tiles[sourceTileIndex];
+                for (int targetTileIndex = sourceTileIndex; targetTileIndex < tiles.Count; targetTileIndex++)
                 {
-                    Tile targetTile = tiles[j];
+                    Tile targetTile = tiles[targetTileIndex];
                     // t | s
                     if (sourceTile.LeftEdgeType == targetTile.RightEdgeType)
                     {
-                        sourceTile.LeftAllowedTiles.Add(targetTile);
-                        targetTile.RightAllowedTiles.Add(sourceTile);
+                        sourceTile.LeftAllowedTiles.Add(targetTileIndex);
+                        targetTile.RightAllowedTiles.Add(sourceTileIndex);
                     }
                     // s | t
                     if (sourceTile.RightEdgeType == targetTile.LeftEdgeType)
                     {
-                        sourceTile.RightAllowedTiles.Add(targetTile);
-                        targetTile.LeftAllowedTiles.Add(sourceTile);
+                        sourceTile.RightAllowedTiles.Add(targetTileIndex);
+                        targetTile.LeftAllowedTiles.Add(sourceTileIndex);
                     }
                     // t / s
                     if (sourceTile.TopEdgeType == targetTile.BottomEdgeType)
                     {
-                        sourceTile.TopAllowedTiles.Add(targetTile);
-                        targetTile.BottomAllowedTiles.Add(sourceTile);
+                        sourceTile.TopAllowedTiles.Add(targetTileIndex);
+                        targetTile.BottomAllowedTiles.Add(sourceTileIndex);
                     }
                     // s / t
                     if (sourceTile.BottomEdgeType == targetTile.TopEdgeType)
                     {
-                        sourceTile.BottomAllowedTiles.Add(targetTile);
-                        targetTile.TopAllowedTiles.Add(sourceTile);
+                        sourceTile.BottomAllowedTiles.Add(targetTileIndex);
+                        targetTile.TopAllowedTiles.Add(sourceTileIndex);
                     }
                 }
             }
@@ -84,7 +84,7 @@ namespace hackathon
                 tile.Frequency = tile.Likelihood / (float)totalLikelihood;
             }
 
-            // Return the populated tiles
+            // Return the populated Tiles
             return tiles;
         }
 

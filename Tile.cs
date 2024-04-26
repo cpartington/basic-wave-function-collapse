@@ -36,10 +36,10 @@ namespace hackathon
         public EdgeType TopEdgeType { get; set; }
         public EdgeType BottomEdgeType { get; set; }
 
-        public List<Tile> LeftAllowedTiles { get; set; } = new();
-        public List<Tile> RightAllowedTiles { get; set; } = new();
-        public List<Tile> TopAllowedTiles { get; set; } = new();
-        public List<Tile> BottomAllowedTiles { get; set; } = new();
+        public List<int> LeftAllowedTiles { get; set; } = new();
+        public List<int> RightAllowedTiles { get; set; } = new();
+        public List<int> TopAllowedTiles { get; set; } = new();
+        public List<int> BottomAllowedTiles { get; set; } = new();
 
         public Tile() { }
     }

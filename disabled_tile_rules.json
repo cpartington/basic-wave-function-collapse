@@ -1,0 +1,64 @@
+{
+    "disabled_tile_rules": [
+        {
+            "atlas": {
+                "atlas_x": 7,
+                "atlas_y": 0
+            },
+            "likelihood": 1,
+            "name": "river tsection 1",
+            "rules": {
+                "bottom": "grass",
+                "left": "river",
+                "right": "river",
+                "top": "river"
+            },
+            "type": "river tsection"
+        },
+        {
+            "atlas": {
+                "atlas_x": 8,
+                "atlas_y": 0
+            },
+            "likelihood": 1,
+            "name": "river tsection 2",
+            "rules": {
+                "bottom": "river",
+                "left": "grass",
+                "right": "river",
+                "top": "river"
+            },
+            "type": "river tsection"
+        },
+        {
+            "atlas": {
+                "atlas_x": 9,
+                "atlas_y": 0
+            },
+            "likelihood": 1,
+            "name": "river tsection 3",
+            "rules": {
+                "bottom": "river",
+                "left": "river",
+                "right": "river",
+                "top": "grass"
+            },
+            "type": "river tsection"
+        },
+        {
+            "atlas": {
+                "atlas_x": 10,
+                "atlas_y": 0
+            },
+            "likelihood": 1,
+            "name": "river tsection 4",
+            "rules": {
+                "bottom": "river",
+                "left": "river",
+                "right": "grass",
+                "top": "river"
+            },
+            "type": "river tsection"
+        }
+    ]
+}

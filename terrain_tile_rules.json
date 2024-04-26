@@ -5,7 +5,7 @@
                 "atlas_x": 0,
                 "atlas_y": 0
             },
-            "likelihood": 5,
+            "likelihood": 75,
             "name": "grass",
             "rules": {
                 "bottom": "grass",
@@ -20,7 +20,7 @@
                 "atlas_x": 1,
                 "atlas_y": 0
             },
-            "likelihood": 5,
+            "likelihood": 1,
             "name": "river corner 1",
             "rules": {
                 "bottom": "grass",
@@ -35,7 +35,7 @@
                 "atlas_x": 2,
                 "atlas_y": 0
             },
-            "likelihood": 5,
+            "likelihood": 1,
             "name": "river corner 2",
             "rules": {
                 "bottom": "grass",
@@ -50,7 +50,7 @@
                 "atlas_x": 3,
                 "atlas_y": 0
             },
-            "likelihood": 5,
+            "likelihood": 1,
             "name": "river corner 3",
             "rules": {
                 "bottom": "river",
@@ -65,7 +65,7 @@
                 "atlas_x": 4,
                 "atlas_y": 0
             },
-            "likelihood": 5,
+            "likelihood": 1,
             "name": "river corner 4",
             "rules": {
                 "bottom": "river",
@@ -104,66 +104,6 @@
                 "top": "river"
             },
             "type": "river straight"
-        },
-        {
-            "atlas": {
-                "atlas_x": 7,
-                "atlas_y": 0
-            },
-            "likelihood": 5,
-            "name": "river tsection 1",
-            "rules": {
-                "bottom": "grass",
-                "left": "river",
-                "right": "river",
-                "top": "river"
-            },
-            "type": "river tsection"
-        },
-        {
-            "atlas": {
-                "atlas_x": 8,
-                "atlas_y": 0
-            },
-            "likelihood": 5,
-            "name": "river tsection 2",
-            "rules": {
-                "bottom": "river",
-                "left": "grass",
-                "right": "river",
-                "top": "river"
-            },
-            "type": "river tsection"
-        },
-        {
-            "atlas": {
-                "atlas_x": 9,
-                "atlas_y": 0
-            },
-            "likelihood": 5,
-            "name": "river tsection 3",
-            "rules": {
-                "bottom": "river",
-                "left": "river",
-                "right": "river",
-                "top": "grass"
-            },
-            "type": "river tsection"
-        },
-        {
-            "atlas": {
-                "atlas_x": 10,
-                "atlas_y": 0
-            },
-            "likelihood": 5,
-            "name": "river tsection 4",
-            "rules": {
-                "bottom": "river",
-                "left": "river",
-                "right": "grass",
-                "top": "river"
-            },
-            "type": "river tsection"
         }
     ]
 }

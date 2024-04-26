@@ -8,11 +8,11 @@ namespace hackathon
 {
     public static class Logger
     {
-        public static readonly bool PrintLogs = true;
+        public static readonly bool PrintDebugLogs = false;
 
-        public static void Log(string message)
+        public static void Debug(string message)
         {
-            if (PrintLogs) System.Diagnostics.Debug.WriteLine(message);
+            if (PrintDebugLogs) System.Diagnostics.Debug.WriteLine(message);
         }
 
         public static void LogWarning(string message)

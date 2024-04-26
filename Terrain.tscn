@@ -7,10 +7,12 @@
 tile_set = ExtResource("1_s7yor")
 format = 2
 script = ExtResource("2_882re")
-timer = NodePath("Timer")
+timer = NodePath("AnimationTimer")
+XLength = 20
+YLength = 30
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.1
+[node name="AnimationTimer" type="Timer" parent="."]
+wait_time = 0.01
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]
+[connection signal="timeout" from="AnimationTimer" to="." method="OnTimerTimeout"]

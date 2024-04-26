@@ -5,7 +5,3 @@
 .vs/
 UnitTests/obj/
 UnitTests/bin/
-
-# Tile stuff
-tiles/
-*.import

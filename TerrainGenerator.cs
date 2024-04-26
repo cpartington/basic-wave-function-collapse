@@ -55,7 +55,7 @@ namespace hackathon
 		
 		public bool RunGeneration()
 		{
-			//Logger.Log($"Entering {nameof(RunGeneration)}");
+			//Logger.Debug($"Entering {nameof(RunGeneration)}");
 			Initialize();
 
 			while (true)
@@ -68,7 +68,7 @@ namespace hackathon
 					// If the heap is empty, we've collapsed all the Tiles and we can finish generating
 					if (EntropyHeap.Count < 1)
 					{
-						//Logger.Log($"Exiting {nameof(RunGeneration)}");
+						//Logger.Debug($"Exiting {nameof(RunGeneration)}");
 						return true;
 					}
 
@@ -87,7 +87,7 @@ namespace hackathon
 				{
 					UpdateData updatedCellData = UpdateQueue.Dequeue();
 					Cell cellToUpdate = TerrainGrid[updatedCellData.YCoord, updatedCellData.XCoord];
-					//Logger.Log($"Removed {cellToUpdate.Coordinate} from the queue for processing, updated queue length: {UpdateQueue.Count}");
+					//Logger.Debug($"Removed {cellToUpdate.Coordinate} from the queue for processing, updated queue length: {UpdateQueue.Count}");
 					bool madeAnUpdate = false;
 
 					// Iterate over all the possible tiles for the current cell
@@ -166,7 +166,7 @@ namespace hackathon
 			{
 				// Update the cell to the left (i.e., original cell is to its right)
 				UpdateQueue.Enqueue(new UpdateData { XCoord = newX, YCoord = newY, UpdatedTileIndexes = allowedTiles, UpdateDirection = Direction.RIGHT });
-				//Logger.Log($"Added cell {TerrainGrid[newY, newX].Coordinate} to the queue for processing, updated queue length: {UpdateQueue.Count}");
+				//Logger.Debug($"Added cell {TerrainGrid[newY, newX].Coordinate} to the queue for processing, updated queue length: {UpdateQueue.Count}");
 			}
 
 			(newX, newY) = GetNewCoord((x, y), Direction.TOP);
@@ -174,7 +174,7 @@ namespace hackathon
 			{
 				// Update the cell above
 				UpdateQueue.Enqueue(new UpdateData { XCoord = newX, YCoord = newY, UpdatedTileIndexes = allowedTiles, UpdateDirection = Direction.BOTTOM });
-				//Logger.Log($"Added cell {TerrainGrid[newY, newX].Coordinate} to the queue for processing, updated queue length: {UpdateQueue.Count}");
+				//Logger.Debug($"Added cell {TerrainGrid[newY, newX].Coordinate} to the queue for processing, updated queue length: {UpdateQueue.Count}");
 			}
 
 			(newX, newY) = GetNewCoord((x, y), Direction.RIGHT);
@@ -182,7 +182,7 @@ namespace hackathon
 			{
 				// Update the cell to the right
 				UpdateQueue.Enqueue(new UpdateData { XCoord = newX, YCoord = newY, UpdatedTileIndexes = allowedTiles, UpdateDirection = Direction.LEFT });
-				//Logger.Log($"Added cell {TerrainGrid[newY, newX].Coordinate} to the queue for processing, updated queue length: {UpdateQueue.Count}");
+				//Logger.Debug($"Added cell {TerrainGrid[newY, newX].Coordinate} to the queue for processing, updated queue length: {UpdateQueue.Count}");
 			}
 
 			(newX, newY) = GetNewCoord((x, y), Direction.BOTTOM);
@@ -190,7 +190,7 @@ namespace hackathon
 			{
 				// Update the cell below
 				UpdateQueue.Enqueue(new UpdateData { XCoord = newX, YCoord = newY, UpdatedTileIndexes = allowedTiles, UpdateDirection = Direction.TOP });
-				//Logger.Log($"Added cell {TerrainGrid[newY, newX].Coordinate} to the queue for processing, updated queue length: {UpdateQueue.Count}");
+				//Logger.Debug($"Added cell {TerrainGrid[newY, newX].Coordinate} to the queue for processing, updated queue length: {UpdateQueue.Count}");
 			}
 		}
 

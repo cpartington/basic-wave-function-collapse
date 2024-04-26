@@ -97,7 +97,7 @@ namespace hackathon
                 }
             }
 
-            Logger.Log($"Collapsed cell {Coordinate}, selected tile: {CollapsedTileIndex}");
+            Logger.Debug($"Collapsed cell {Coordinate}, selected tile: {CollapsedTileIndex}");
         }
 
         private void UpdateEntropy()
